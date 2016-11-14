@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>server user</title>
+	<link rel="stylesheet" href="node_modules/semantic-ui-css/semantic.css">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+	<div id="error">
+		<span id="spanError">Erreur le mot de passe ou l'email et incorrect !</span>
+	</div>
+
+	<div class="ui one column center aligned grid" id="login">
+		<div class="column six wide form-holder">
+			<h2 class="center aligned header form-head" id="title">Connexion</h2>
+			<div class="ui form">
+				<form action="/login" class="ui form" method="post">
+
+					<div class="field">
+						<label for="email">Email</label>
+						<div class="ui  left icon input">
+							<input id="email" type="text" name="email">
+							<i class="at icon"></i>
+						</div>
+					</div>
+
+					<div class="field">
+						<label for="mdp">Mot de passe</label>
+						<div class="ui  left icon input">
+							<input id="mdp" type="password" name="mdp">
+							<i class="lock icon"></i>
+						</div>
+					</div>
+
+					<div class="field">
+						<button id="connexion" class="ui button large fluid green labeled icon" id="buttonSave">
+							<i class="mail forward icon"></i> Connexion
+						</button>
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="node_modules/jquery/dist/jquery.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>

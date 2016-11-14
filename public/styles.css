@@ -1,0 +1,35 @@
+body {
+	background-color: #34314c;
+	padding: 0;
+	margin: 0;
+}
+span {
+	margin-top: 5px;
+	font-size: 25px;
+}
+#login {
+	background: rgba(255,255,255,0.2);
+	margin-top: 10%;
+	border-radius: 3px;
+}
+#title {
+	font-size: 30px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	color: #fff;
+	text-shadow: 0 0 30px #000;
+	margin: 15px auto 30px auto;
+}
+#error {
+	background-color: #ff7473;
+	color: #fff;
+	height: 30px;
+	width: 100%;
+	font-family: 'Open Sans', sans-serif;
+	
+}
+#spanError{
+	color: #fff;
+	font-family: 'Open Sans', sans-serif;
+	margin-top: 20px;
+}
