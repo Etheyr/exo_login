@@ -26,10 +26,31 @@ span {
 	height: 30px;
 	width: 100%;
 	font-family: 'Open Sans', sans-serif;
+	display: none;
 	
 }
 #spanError{
 	color: #fff;
 	font-family: 'Open Sans', sans-serif;
 	margin-top: 20px;
+}
+#labelEmail{
+	color: #fff;
+	text-shadow: 0 0 20px #000;
+}
+#labelMdp{
+	color: #fff;
+	text-shadow: 0 0 20px #000;
+}
+#souvenir {
+	text-align: left;
+	margin-top: 10%;
+}
+.ui.checkbox label {
+	color: #fff;
+	text-shadow: 0 0 30px #000;
+	font-family: 'Open Sans', sans-serif;
+}
+#connexion{
+	margin-top: 5%;
 }

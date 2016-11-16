@@ -4,41 +4,42 @@ $(document).ready(function(){
 
 	var app = {
 
-		email : null,
-		mdp : null,
-
 		init: function(){
 
-			app.recupInput();
 			$('form').on('submit',this.recupInput.bind(this));
 
 		},
-		recupInput: function(){
+		recupInput: function(event){
 
-			$('#email').val();
-			$('#mdp').val();
+			event.preventDefault();
+
+			var email = $('#email').val();
+			var mdp = $('#mdp').val();
+			this.submitForm({email:email,mdp:mdp});
 
 		},
-		verifier: function(){
+		verifier: function(data){
 
-
+			if(data.err === true){
+				$('#error').show();
+				$('#email').css('border' , '2px solid #ff7473');
+				$('#mdp').css('border' , '2px solid #ff7473');
+			}else{
+				 document.location.href="http://localhost:3451/login.html";
+			}
 		},
 		submitForm : function(data){
+
+			console.log(data);
 
 			$.ajax({
 
 				type :'POST',
-				url : "localhost:3451/login",
+				url : $("form").attr("action"),
 				data : data,
-				success : this.success
+				success : this.verifier
 			});
-		},
-		success: function() {
-			alert('Gg rumble'); 
-		},
-
-
-
+		}
 	}
 	app.init();
 });
